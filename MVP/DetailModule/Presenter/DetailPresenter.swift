@@ -21,7 +21,6 @@ class DetailPresenter: DetailViewPresenterProtocol {
     weak var view: DetailViewProtocol?
     var router: RouterProtocol?
     let networkService: NetworkServiceProtocol?
-//    weak var networkService: NetworkServiceProtocol?
     var comment: Comment?
     
     required init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, comment: Comment?) {
