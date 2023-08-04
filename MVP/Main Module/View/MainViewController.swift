@@ -24,6 +24,7 @@ class MainViewController: UIViewController {
         
         setupViews()
         setupConstraints()
+        presenter?.getComments()
     }
     
     private func setupViews() {
@@ -69,8 +70,7 @@ extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let comment = presenter?.comments?[indexPath.row]
-        let detailViewController = ModuleBuilder.createDetailModule(comment: comment)
-        navigationController?.pushViewController(detailViewController, animated: true)
+        presenter?.tapOnTheComment(comment: comment)
     }
 }
 

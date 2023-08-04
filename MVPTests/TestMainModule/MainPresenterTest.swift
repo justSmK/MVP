@@ -8,57 +8,107 @@
 import XCTest
 @testable import MVP
 
-class MockView: MainViewProtocol {
-    var titleTest: String?
-    func setGreeting(greeting: String) {
-        self.titleTest = greeting
+fileprivate class MockRouter: RouterProtocol {
+    func initialViewController() {}
+    func showDetail(comment: MVP.Comment?) {}
+    func popToRoot() {}
+    var navigationController: UINavigationController?
+    var assemblyBuilder: MVP.AssemblyBuilderProtocol?
+}
+
+fileprivate class MockView: MainViewProtocol {
+    var isSuccess: Bool = false
+    var failureError: Error?
+    
+    func success() {
+        isSuccess = true
+    }
+    
+    func failure(error: Error) {
+        failureError = error
     }
 }
 
-enum MainError: Error {
-    case optionalError
+fileprivate class MockNetworkService: NetworkServiceProtocol {
+    public var comments: [Comment]!
+
+    init() {}
+
+    convenience init(comments: [Comment]?) {
+        self.init()
+        self.comments = comments
+    }
+    
+    func getComments(completion: @escaping (Result<[MVP.Comment]?, Error>) -> Void) {
+        if let comments {
+            completion(.success(comments))
+        } else {
+            let error = NSError(domain: "Failure Get Comments", code: 0, userInfo: nil)
+            completion(.failure(error))
+        }
+    }
 }
 
 final class MainPresenterTest: XCTestCase {
     
-    var view: MockView?
-    var person: Person?
-    var presenter: MainPresenter?
+    fileprivate var view: MockView!
+    var presenter: MainPresenter!
+    var networkService: NetworkServiceProtocol!
+    var router: RouterProtocol!
+    var comments = [Comment]()
     
     override func setUpWithError() throws {
+        router = MockRouter()
         view = MockView()
-        person = Person(firstName: "Baz", lastName: "Bar")
-        guard let view, let person else {
-            throw MainError.optionalError
-        }
-        presenter = MainPresenter(view: view, person: person)
     }
 
     override func tearDownWithError() throws {
         view = nil
-        person = nil
         presenter = nil
+        networkService = nil
+        router = nil
     }
     
-    func testModuleIsNotNil() {
-        XCTAssertNotNil(view, "view is not nil")
-        XCTAssertNotNil(person, "person is not nil")
-        XCTAssertNotNil(presenter, "presenter is not nil")
-    }
-    
-    func testView() {
-        presenter?.showGreeting()
-        XCTAssertEqual(view?.titleTest, "Baz Bar")
+    func testGetSuccessComments() {
+        let comment = Comment(postId: 1, id: 2, name: "Foo", email: "Baz", body: "Bar")
+        comments.append(comment)
+        
+        networkService = MockNetworkService(comments: comments)
+        presenter = MainPresenter(view: view, networkService: networkService, router: router)
+        
+        let expectation = self.expectation(description: "Fetching Comments")
+        
+        presenter.getComments()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        XCTAssertTrue(view.isSuccess)
+        XCTAssertNil(view.failureError)
+        XCTAssertNotNil(presenter.comments)
+        XCTAssertEqual(presenter.comments?.first, comment)
     }
 
-    func testPersonModel() {
-        XCTAssertEqual(person?.firstName, "Baz")
-        XCTAssertEqual(person?.lastName, "Bar")
+    func testGetFailureComments() {
+
+        networkService = MockNetworkService(comments: nil)
+        presenter = MainPresenter(view: view, networkService: networkService, router: router)
+        
+        let expectation = self.expectation(description: "Fetching Comments")
+        
+        presenter.getComments()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 5)
+        
+        XCTAssertFalse(view.isSuccess)
+        XCTAssertNotNil(view.failureError)
+        XCTAssertNil(presenter.comments)
     }
-    
-    func testExample() throws {
-
-    }
-
-
 }

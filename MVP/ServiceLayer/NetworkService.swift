@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol NetworkServiceProtocol {
+protocol NetworkServiceProtocol: AnyObject {
     func getComments(completion: @escaping (Result<[Comment]?, Error>) -> Void)
 }
 
@@ -30,6 +30,4 @@ class NetworkService: NetworkServiceProtocol {
             }
         }.resume()
     }
-    
-    
 }
