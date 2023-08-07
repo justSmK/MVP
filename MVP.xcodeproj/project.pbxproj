@@ -7,23 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB19DF6B2A7D0307008D17A8 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19DF6A2A7D0307008D17A8 /* MainPresenter.swift */; };
+		BB19DF6B2A7D0307008D17A8 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19DF6A2A7D0307008D17A8 /* GreetingPresenter.swift */; };
 		BB19DF732A7D08FE008D17A8 /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19DF722A7D08FE008D17A8 /* AssemblyModuleBuilder.swift */; };
-		BB19DF782A7D0DC2008D17A8 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19DF772A7D0DC2008D17A8 /* MainPresenterTest.swift */; };
-		BBB08EDB2A7D1F7E00D661A2 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EDA2A7D1F7E00D661A2 /* Comment.swift */; };
-		BBB08EDD2A7D1FCE00D661A2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EDC2A7D1FCE00D661A2 /* NetworkService.swift */; };
-		BBB08EE02A7D23E500D661A2 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EDF2A7D23E500D661A2 /* DetailPresenter.swift */; };
-		BBB08EE42A7D252200D661A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EE32A7D252200D661A2 /* DetailViewController.swift */; };
-		BBB08EE92A7D282A00D661A2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EE82A7D282A00D661A2 /* Router.swift */; };
-		BBB08EEB2A7D345C00D661A2 /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB08EEA2A7D345C00D661A2 /* RouterTest.swift */; };
+		BB971E132A81253700B80FA9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB971E122A81253700B80FA9 /* Person.swift */; };
 		BBDE2A8C2A7D0278007F2606 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2A8B2A7D0278007F2606 /* AppDelegate.swift */; };
 		BBDE2A8E2A7D0278007F2606 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2A8D2A7D0278007F2606 /* SceneDelegate.swift */; };
-		BBDE2A902A7D0278007F2606 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2A8F2A7D0278007F2606 /* MainViewController.swift */; };
+		BBDE2A902A7D0278007F2606 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2A8F2A7D0278007F2606 /* GreetingViewController.swift */; };
 		BBDE2A952A7D0279007F2606 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE2A942A7D0279007F2606 /* Assets.xcassets */; };
 		BBDE2A982A7D0279007F2606 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBDE2A962A7D0279007F2606 /* LaunchScreen.storyboard */; };
-		BBDE2AA32A7D0279007F2606 /* MVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2AA22A7D0279007F2606 /* MVPTests.swift */; };
-		BBDE2AAD2A7D0279007F2606 /* MVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2AAC2A7D0279007F2606 /* MVPUITests.swift */; };
-		BBDE2AAF2A7D0279007F2606 /* MVPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE2AAE2A7D0279007F2606 /* MVPUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,28 +35,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB19DF6A2A7D0307008D17A8 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		BB19DF6A2A7D0307008D17A8 /* GreetingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenter.swift; sourceTree = "<group>"; };
 		BB19DF722A7D08FE008D17A8 /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
-		BB19DF772A7D0DC2008D17A8 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
-		BBB08EDA2A7D1F7E00D661A2 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		BBB08EDC2A7D1FCE00D661A2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		BBB08EDF2A7D23E500D661A2 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		BBB08EE32A7D252200D661A2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		BBB08EE82A7D282A00D661A2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		BBB08EEA2A7D345C00D661A2 /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
-		BBB08EEC2A7D36C000D661A2 /* MVP.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MVP.xctestplan; sourceTree = "<group>"; };
+		BB971E122A81253700B80FA9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		BBDE2A882A7D0278007F2606 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE2A8B2A7D0278007F2606 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBDE2A8D2A7D0278007F2606 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BBDE2A8F2A7D0278007F2606 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BBDE2A8F2A7D0278007F2606 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		BBDE2A942A7D0279007F2606 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDE2A972A7D0279007F2606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBDE2A992A7D0279007F2606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDE2A9E2A7D0279007F2606 /* MVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBDE2AA22A7D0279007F2606 /* MVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPTests.swift; sourceTree = "<group>"; };
 		BBDE2AA82A7D0279007F2606 /* MVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBDE2AAC2A7D0279007F2606 /* MVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITests.swift; sourceTree = "<group>"; };
-		BBDE2AAE2A7D0279007F2606 /* MVPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,20 +74,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB19DF6C2A7D06B9008D17A8 /* Main Module */ = {
-			isa = PBXGroup;
-			children = (
-				BB19DF6F2A7D06E1008D17A8 /* Presenter */,
-				BB19DF6E2A7D06D7008D17A8 /* Model */,
-				BB19DF6D2A7D06CE008D17A8 /* View */,
-			);
-			path = "Main Module";
-			sourceTree = "<group>";
-		};
 		BB19DF6D2A7D06CE008D17A8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BBDE2A8F2A7D0278007F2606 /* MainViewController.swift */,
+				BBDE2A8F2A7D0278007F2606 /* GreetingViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,7 +85,7 @@
 		BB19DF6E2A7D06D7008D17A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BBB08EDA2A7D1F7E00D661A2 /* Comment.swift */,
+				BB971E122A81253700B80FA9 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,51 +93,9 @@
 		BB19DF6F2A7D06E1008D17A8 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				BB19DF6A2A7D0307008D17A8 /* MainPresenter.swift */,
+				BB19DF6A2A7D0307008D17A8 /* GreetingPresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BB19DF762A7D0D72008D17A8 /* TestMainModule */ = {
-			isa = PBXGroup;
-			children = (
-				BB19DF772A7D0DC2008D17A8 /* MainPresenterTest.swift */,
-				BBB08EEA2A7D345C00D661A2 /* RouterTest.swift */,
-			);
-			path = TestMainModule;
-			sourceTree = "<group>";
-		};
-		BBB08EDE2A7D1FE000D661A2 /* ServiceLayer */ = {
-			isa = PBXGroup;
-			children = (
-				BBB08EDC2A7D1FCE00D661A2 /* NetworkService.swift */,
-			);
-			path = ServiceLayer;
-			sourceTree = "<group>";
-		};
-		BBB08EE12A7D24FE00D661A2 /* DetailModule */ = {
-			isa = PBXGroup;
-			children = (
-				BBB08EE22A7D250200D661A2 /* Presenter */,
-				BBB08EE52A7D252300D661A2 /* View */,
-			);
-			path = DetailModule;
-			sourceTree = "<group>";
-		};
-		BBB08EE22A7D250200D661A2 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				BBB08EDF2A7D23E500D661A2 /* DetailPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		BBB08EE52A7D252300D661A2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BBB08EE32A7D252200D661A2 /* DetailViewController.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		BBB08EED2A7D525100D661A2 /* Application */ = {
@@ -175,7 +104,9 @@
 				BBDE2A8B2A7D0278007F2606 /* AppDelegate.swift */,
 				BBDE2A8D2A7D0278007F2606 /* SceneDelegate.swift */,
 				BB19DF722A7D08FE008D17A8 /* AssemblyModuleBuilder.swift */,
-				BBB08EE82A7D282A00D661A2 /* Router.swift */,
+				BB19DF6E2A7D06D7008D17A8 /* Model */,
+				BB19DF6F2A7D06E1008D17A8 /* Presenter */,
+				BB19DF6D2A7D06CE008D17A8 /* View */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -194,9 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				BBDE2A8A2A7D0278007F2606 /* MVP */,
-				BBDE2AA12A7D0279007F2606 /* MVPTests */,
-				BBB08EEC2A7D36C000D661A2 /* MVP.xctestplan */,
-				BBDE2AAB2A7D0279007F2606 /* MVPUITests */,
 				BBDE2A892A7D0278007F2606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -215,30 +143,9 @@
 			isa = PBXGroup;
 			children = (
 				BBB08EED2A7D525100D661A2 /* Application */,
-				BBB08EDE2A7D1FE000D661A2 /* ServiceLayer */,
-				BB19DF6C2A7D06B9008D17A8 /* Main Module */,
-				BBB08EE12A7D24FE00D661A2 /* DetailModule */,
 				BBB08EEE2A7D52CE00D661A2 /* Resources */,
 			);
 			path = MVP;
-			sourceTree = "<group>";
-		};
-		BBDE2AA12A7D0279007F2606 /* MVPTests */ = {
-			isa = PBXGroup;
-			children = (
-				BB19DF762A7D0D72008D17A8 /* TestMainModule */,
-				BBDE2AA22A7D0279007F2606 /* MVPTests.swift */,
-			);
-			path = MVPTests;
-			sourceTree = "<group>";
-		};
-		BBDE2AAB2A7D0279007F2606 /* MVPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BBDE2AAC2A7D0279007F2606 /* MVPUITests.swift */,
-				BBDE2AAE2A7D0279007F2606 /* MVPUITestsLaunchTests.swift */,
-			);
-			path = MVPUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,16 +278,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBB08EE42A7D252200D661A2 /* DetailViewController.swift in Sources */,
-				BB19DF6B2A7D0307008D17A8 /* MainPresenter.swift in Sources */,
-				BBB08EE92A7D282A00D661A2 /* Router.swift in Sources */,
-				BBDE2A902A7D0278007F2606 /* MainViewController.swift in Sources */,
+				BB19DF6B2A7D0307008D17A8 /* GreetingPresenter.swift in Sources */,
+				BBDE2A902A7D0278007F2606 /* GreetingViewController.swift in Sources */,
 				BBDE2A8C2A7D0278007F2606 /* AppDelegate.swift in Sources */,
-				BBB08EE02A7D23E500D661A2 /* DetailPresenter.swift in Sources */,
-				BBB08EDB2A7D1F7E00D661A2 /* Comment.swift in Sources */,
 				BB19DF732A7D08FE008D17A8 /* AssemblyModuleBuilder.swift in Sources */,
+				BB971E132A81253700B80FA9 /* Person.swift in Sources */,
 				BBDE2A8E2A7D0278007F2606 /* SceneDelegate.swift in Sources */,
-				BBB08EDD2A7D1FCE00D661A2 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDE2AA32A7D0279007F2606 /* MVPTests.swift in Sources */,
-				BBB08EEB2A7D345C00D661A2 /* RouterTest.swift in Sources */,
-				BB19DF782A7D0DC2008D17A8 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,8 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDE2AAF2A7D0279007F2606 /* MVPUITestsLaunchTests.swift in Sources */,
-				BBDE2AAD2A7D0279007F2606 /* MVPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
